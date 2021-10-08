@@ -355,6 +355,7 @@ namespace CRUDBásico
             this.metroButton2.TabIndex = 16;
             this.metroButton2.Text = "Nuevo Registro";
             this.metroButton2.UseSelectable = true;
+            this.metroButton2.Click += new System.EventHandler(this.metroButton2_Click);
             // 
             // metroButton1
             // 

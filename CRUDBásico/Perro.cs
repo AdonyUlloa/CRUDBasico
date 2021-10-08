@@ -12,6 +12,8 @@ namespace CRUDBásico
 {
     public partial class Perro : Form
     {
+        private string action = "";
+
         public Perro()
         {
             InitializeComponent();
@@ -24,6 +26,7 @@ namespace CRUDBásico
 
         private void Perro_Load(object sender, EventArgs e)
         {
+            
             controlsDisable();
 
         }
@@ -38,20 +41,51 @@ namespace CRUDBásico
             txbOwerName.Enabled = false;
             txbOwerName.Enabled = false;
             txbtelephone.Enabled = false;
-            lbPerro.Enabled = false;
-            lbName.Enabled = false;
-            lbRaza.Enabled = false;
-            lbEdad.Enabled = false;
-            lbVacuna.Enabled = false;
-            lbdueno.Enabled = false;
-            lbTelefono.Enabled = false;  
+             
         }
+
+        public void controlsEnable()
+        {
+            txbIdPerro.Enabled = true;
+            txbName.Enabled = true;
+            txbRaza.Enabled = true;
+            txbAge.Enabled = true;
+            txbVaccine.Enabled = true;
+            txbOwerName.Enabled = true;
+            txbtelephone.Enabled = true;
+        }
+
+
+
+
+
+        public void clearControls()
+        {
+            txbIdPerro.Text = "";
+            txbName.Text = "";
+            txbRaza.Text = "";
+            txbAge.Text = "";
+            txbVaccine.Text = "";
+            txbOwerName.Text = "";
+            txbtelephone.Text = "";
+        }
+
+
 
         private void metroButton1_Click(object sender, EventArgs e)
         {
+            string mensaje = "¿Seguro desea cancelar ";
+            if (MetroFramework.MetroMessageBox.Show(this, mensaje, "Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
 
-            
+            }
 
+        }
+
+        private void metroButton2_Click(object sender, EventArgs e)
+        {
+            controlsEnable();
+            clearControls();
         }
     }
 }
