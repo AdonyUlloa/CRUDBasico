@@ -98,6 +98,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clasePerro.cs" />
+    <Compile Include="Connection.cs" />
+    <Compile Include="Crud.cs" />
     <Compile Include="Perro.cs">
       <SubType>Form</SubType>
     </Compile>
